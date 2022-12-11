@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang = "fr">
+    <head>
+        <meta charset= "UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="{% static 'css/styleHeader.css' %}" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'Hello World' %}"> Accueil </a></li>
+                    <li><a href="{% url 'somme' num1=5 num2=4 %}"> Somme </a></li>
+                    <li><a href="{% url 'pages_blanches' %}"> Pages blanches </a></li>
+                    <li><a href="{% url 'pages_jaunes' %}"> Pages jaunes </a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1></h1>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

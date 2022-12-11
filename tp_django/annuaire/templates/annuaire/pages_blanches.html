@@ -1,0 +1,11 @@
+{% extends "annuaire/list.html" %}
+
+{% block annuaire %}
+    {% for contact in contacts %}
+        <ul>
+            <li><a href ={% url 'contact' contact.nom %}> 
+                {{ contact.nom }} {{ contact.prenom }}
+            </a></li>
+        </ul>
+    {% endfor %}
+{% endblock %} 

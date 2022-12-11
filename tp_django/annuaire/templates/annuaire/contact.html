@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<detailparticulier>
+    <h1>{{ contact.nom }} {{ contact.prenom }}</h1>
+    <p> Numéro de téléphone : {{ contact.telephone }}</p>
+</detailparticulier>
+<a href ={% url redirect %}>
+    Retourner sur l'annuaire
+</a>
+{% endblock %}
